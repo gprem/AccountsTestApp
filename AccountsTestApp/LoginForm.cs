@@ -29,7 +29,9 @@ namespace AccountsTestApp
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            List<string> accountList = DataManager.GetAccounts();
 
+            this.comboBox1.Items.AddRange(accountList.ToArray());
         }
     }
 }
