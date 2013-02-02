@@ -32,6 +32,9 @@ namespace AccountsTestApp
             List<string> accountList = DataManager.GetAccounts();
 
             this.comboBox1.Items.AddRange(accountList.ToArray());
+
+            if (comboBox1.Items.Count > 0)
+                this.comboBox1.SelectedIndex = 0;
         }
     }
 }
