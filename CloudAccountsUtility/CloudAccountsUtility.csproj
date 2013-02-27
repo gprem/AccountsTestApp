@@ -65,6 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AccountsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountsModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="AddAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>

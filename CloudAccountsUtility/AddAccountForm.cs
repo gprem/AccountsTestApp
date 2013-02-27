@@ -19,6 +19,7 @@ namespace CloudAccountsUtility
             this.btnOK.Enabled = false;
         }
 
+
         public string AccountName
         {
             get { return this.tbName.Text.Trim(); }
@@ -28,6 +29,12 @@ namespace CloudAccountsUtility
         {
             get { return this.tbConfigFilePath.Text.Trim(); }
         }
+
+        public string DefaultPlantID
+        {
+            get { return this.tbDefaultPlantID.Text.Trim(); }
+        }
+
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {

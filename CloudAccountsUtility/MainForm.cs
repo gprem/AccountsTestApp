@@ -44,7 +44,7 @@ namespace CloudAccountsUtility
                     acc.Name = form.AccountName;
                     acc.ConfigurationInfo = doc.InnerXml;
                     acc.Enabled = true;
-
+                    acc.DefaultPlantID = form.DefaultPlantID;
                     ctx.Accounts.Add(acc);
 
                     ctx.SaveChanges();

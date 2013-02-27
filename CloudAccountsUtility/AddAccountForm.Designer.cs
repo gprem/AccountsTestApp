@@ -36,12 +36,14 @@
             this.tbConfigFilePath = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tbDefaultPlantID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOK
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(260, 120);
+            this.btnOK.Location = new System.Drawing.Point(260, 138);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 0;
@@ -51,7 +53,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(341, 120);
+            this.btnCancel.Location = new System.Drawing.Point(341, 138);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 1;
@@ -107,14 +109,32 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "Configuration File (*.config) | *.config";
             // 
+            // tbDefaultPlantID
+            // 
+            this.tbDefaultPlantID.Location = new System.Drawing.Point(106, 95);
+            this.tbDefaultPlantID.Name = "tbDefaultPlantID";
+            this.tbDefaultPlantID.Size = new System.Drawing.Size(284, 20);
+            this.tbDefaultPlantID.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Default PlantID:";
+            // 
             // AddAccountForm
             // 
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(428, 155);
+            this.ClientSize = new System.Drawing.Size(428, 173);
             this.ControlBox = false;
+            this.Controls.Add(this.tbDefaultPlantID);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.tbConfigFilePath);
             this.Controls.Add(this.label2);
@@ -144,5 +164,7 @@
         private System.Windows.Forms.TextBox tbConfigFilePath;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox tbDefaultPlantID;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -18,5 +18,6 @@ namespace CloudAccountsUtility
         public string Name { get; set; }
         public bool Enabled { get; set; }
         public string ConfigurationInfo { get; set; }
+        public string DefaultPlantID { get; set; }
     }
 }
