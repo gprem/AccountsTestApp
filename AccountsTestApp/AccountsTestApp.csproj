@@ -45,11 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AccountData.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataManager.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -80,17 +75,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="AccountData.xsc">
-      <DependentUpon>AccountData.xsd</DependentUpon>
-    </None>
-    <None Include="AccountData.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AccountData.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="AccountData.xss">
-      <DependentUpon>AccountData.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
