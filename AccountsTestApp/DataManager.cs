@@ -34,5 +34,35 @@ namespace AccountsTestApp
 
             return accountList;
         }
+
+        public static string GetConfigInfo(string accountName)
+        {
+            string configInfo = "";
+
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountsTestApp.Properties.Settings.AccountsConnectionString"].ConnectionString))
+            {
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    try
+                    {
+                        cmd.CommandText = "SELECT ConfigurationInfo FROM Accounts WHERE [Name] = @accountName;";
+                        cmd.Parameters.Add("@accountName", System.Data.SqlDbType.NVarChar, 50).Value = accountName;
+
+                        conn.Open();
+
+                        object retValObj = cmd.ExecuteScalar();
+                        if (retValObj != null)
+                            configInfo = retValObj.ToString();
+                    }
+                    finally
+                    {
+                        if (conn.State == System.Data.ConnectionState.Open)
+                            conn.Close();
+                    }
+                }
+            }
+
+            return configInfo;
+        }
     }
 }

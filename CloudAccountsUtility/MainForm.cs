@@ -36,7 +36,7 @@ namespace CloudAccountsUtility
 
                 //TODO: Validate if account name is unique & config file exists
                 using (AccountsEntities ctx = new AccountsEntities())
-                {
+                {                  
                     XmlDocument doc = new XmlDocument();
                     doc.Load(form.ConfigurationFilePath);
                     
@@ -87,7 +87,6 @@ namespace CloudAccountsUtility
         private void lvAccounts_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.btnRemove.Enabled = (this.lvAccounts.SelectedItems.Count > 0);
-            this.btnRemove.Enabled = (this.lvAccounts.SelectedItems.Count == 1);
         }
 
         private void Form1_Load(object sender, EventArgs e)

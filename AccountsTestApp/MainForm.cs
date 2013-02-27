@@ -24,5 +24,13 @@ namespace AccountsTestApp
                 form.ShowDialog(this);
             }
         }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            foreach (var key in System.Configuration.ConfigurationManager.AppSettings.AllKeys)
+            {
+                this.tbLog.Text += string.Concat(System.Configuration.ConfigurationManager.AppSettings[key], Environment.NewLine);
+            }
+        }
     }
 }
